@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home_main"
+    app:startDestination="@id/upComingVisits">
+
+    <fragment
+        android:id="@+id/upComingVisits"
+        android:name="com.example.peaoplepassclientside.views.UpComingVisits"
+        android:label="fragment_up_coming_visits"
+        tools:layout="@layout/fragment_up_coming_visits" >
+        <action
+            android:id="@+id/action_upComingVisits_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_upComingVisits_to_visitFragment"
+            app:destination="@id/visitFragment" />
+        <action
+            android:id="@+id/action_upComingVisits_to_receiverFragment"
+            app:destination="@id/receiverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyVisits"
+        android:name="com.example.peaoplepassclientside.views.HistoryVisits"
+        android:label="fragment_history_visits"
+        tools:layout="@layout/fragment_history_visits" />
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.peaoplepassclientside.views.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.peaoplepassclientside.views.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.peaoplepassclientside.views.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+    <fragment
+        android:id="@+id/visitFragment"
+        android:name="com.example.peaoplepassclientside.views.VisitFragment"
+        android:label="fragment_visit"
+        tools:layout="@layout/fragment_visit" >
+        <action
+            android:id="@+id/action_visitFragment_to_infoVisitorFragment"
+            app:destination="@id/infoVisitorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoVisitorFragment"
+        android:name="com.example.peaoplepassclientside.views.InfoVisitorFragment"
+        android:label="fragment_info_visitor"
+        tools:layout="@layout/fragment_info_visitor" />
+    <fragment
+        android:id="@+id/orderPass"
+        android:name="com.example.peaoplepassclientside.views.OrderPass"
+        android:label="fragment_order_pass"
+        tools:layout="@layout/fragment_order_pass" >
+
+        <action
+            android:id="@+id/action_orderPass_to_aboutPassFragment"
+            app:destination="@id/aboutPassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiverFragment"
+        android:name="com.example.peaoplepassclientside.views.ReceiverFragment"
+        android:label="fragment_receiver"
+        tools:layout="@layout/fragment_receiver" />
+    <fragment
+        android:id="@+id/aboutPassFragment"
+        android:name="com.example.peaoplepassclientside.views.AboutPassFragment"
+        android:label="fragment_about_pass"
+        tools:layout="@layout/fragment_about_pass" >
+        <action
+            android:id="@+id/action_aboutPassFragment_to_changeOrderFragment"
+            app:destination="@id/changeOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeOrderFragment"
+        android:name="com.example.peaoplepassclientside.views.ChangeOrderFragment"
+        android:label="fragment_change_order"
+        tools:layout="@layout/fragment_change_order" />
+</navigation>

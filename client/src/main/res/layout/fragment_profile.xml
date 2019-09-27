@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.ProfileFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toobar_profile"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_toolbar_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/my_profile"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/textColor"/>
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+ <androidx.core.widget.NestedScrollView
+     android:fillViewport="true"
+     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_marginBottom="60dp"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/profile_img_profile_fragment"
+             android:layout_width="@dimen/_100sdp"
+             android:layout_height="@dimen/_100sdp"
+             android:src="@drawable/ic_select_img"
+             android:layout_marginTop="@dimen/_30sdp"
+             app:layout_constraintBottom_toTopOf="@+id/edt_input_surname"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintRight_toRightOf="parent"/>
+
+
+         <com.google.android.material.textfield.TextInputLayout
+             android:layout_marginTop="@dimen/_30sdp"
+             android:id="@+id/edt_input_surname"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_10sdp"
+             android:layout_marginStart="@dimen/_10sdp"
+             android:layout_marginRight="@dimen/_10sdp"
+             android:layout_marginEnd="@dimen/_10sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintBottom_toTopOf="@+id/edt_input_name"
+             app:layout_constraintTop_toBottomOf="@+id/profile_img_profile_fragment">
+             <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/edtProfileName"
+                 android:inputType="text"
+                 android:imeOptions="actionNext"
+
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textColorHint="#C8C7CC"
+                 android:textColor="@color/textColor"
+                 android:hint="фамилия"/>
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/edt_input_name"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_10sdp"
+             android:layout_marginStart="@dimen/_10sdp"
+             android:layout_marginRight="@dimen/_10sdp"
+             android:layout_marginEnd="@dimen/_10sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintBottom_toTopOf="@+id/edt_input_middlename"
+             app:layout_constraintTop_toBottomOf="@+id/edt_input_surname">
+             <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/edtProfileSurname"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/textColor"
+                 android:hint="имя"
+                 android:textColorHint="#C8C7CC"
+                 android:inputType="text"
+                 android:imeOptions="actionNext"
+                 />
+         </com.google.android.material.textfield.TextInputLayout>
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/edt_input_middlename"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_10sdp"
+             android:layout_marginStart="@dimen/_10sdp"
+             android:layout_marginRight="@dimen/_10sdp"
+             android:layout_marginEnd="@dimen/_10sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintBottom_toTopOf="@+id/edt_input_email"
+             app:layout_constraintTop_toBottomOf="@+id/edt_input_name">
+             <com.google.android.material.textfield.TextInputEditText
+                 android:layout_width="match_parent"
+                 android:id="@+id/edtProfileMiddleName"
+                 android:layout_height="wrap_content"
+                 android:inputType="text"
+                 android:textColor="@color/textColor"
+                 android:hint="отчество"
+                 android:textColorHint="#C8C7CC"
+                 android:imeOptions="actionNext"
+                 />
+         </com.google.android.material.textfield.TextInputLayout>
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/edt_input_email"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_10sdp"
+             android:layout_marginStart="@dimen/_10sdp"
+             android:layout_marginRight="@dimen/_10sdp"
+             android:layout_marginEnd="@dimen/_10sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintBottom_toTopOf="@+id/btn_save"
+             app:layout_constraintTop_toBottomOf="@+id/edt_input_middlename">
+             <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/edtProfileMail"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:inputType="text"
+                 android:imeOptions="actionDone"
+                 android:textColor="@color/textColor"
+                 android:textColorHint="#C8C7CC"
+                 android:hint="e-mail"
+                 />
+         </com.google.android.material.textfield.TextInputLayout>
+
+
+         <Button
+             android:id="@+id/btn_save"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/colorMain"
+             android:padding="@dimen/_15sdp"
+             android:text="Сохранить изменения"
+             android:textColor="@color/colorWhite"
+             android:textSize="@dimen/_13ssp"
+             android:layout_margin="@dimen/_10sdp"
+             app:layout_constraintTop_toBottomOf="@+id/edt_input_email"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

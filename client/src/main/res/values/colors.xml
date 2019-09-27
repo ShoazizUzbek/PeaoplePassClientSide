@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorMain">#189ACB</color>
+    <color name="colorMainBlue">#189ACB</color>
+    <color name="textColor">#1B1B1B</color>
+    <color name="colorHint">#8A8A8F</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="item_back_gr_white">#00000000</color>
+
+    <color name="redColor">#E70A0A</color>
+
+    <color name="txt_btn">#8A8A8F</color>
+    <color name="btn_back">#F3F3F3</color>
+    <color name="visitItem">#F2F5F8</color>
+    <color name="visitItemWhite">#E5E5E5</color>
+
+</resources>

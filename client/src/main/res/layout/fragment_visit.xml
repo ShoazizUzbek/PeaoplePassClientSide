@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.VisitFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_visit"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/back_visit"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"/>
+            <TextView
+                android:id="@+id/txt_visit_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/info_visit"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/textColor"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <View
+        android:id="@+id/l1"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_visit"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DBD5D5"/>
+
+        <TextView
+            android:id="@+id/status_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l1"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="визит состоялся"
+            android:textColor="#09B405"
+            />
+
+    <View
+        android:id="@+id/l2"
+        app:layout_constraintTop_toBottomOf="@+id/status_visit"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DBD5D5"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_second_visit"
+        app:layout_constraintTop_toBottomOf="@+id/l2"
+        android:background="@color/colorWhite"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/string_visitor_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="посетитель"
+            android:textColor="#004C8D"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+
+        <TextView
+            android:id="@+id/txt_visitor_upcoming_visit"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Shoaziz BAkhtiyorov"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/string_visitor_visit"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_arrow"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/l3"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_second_visit"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DBD5D5"
+        />
+
+    <TextView
+        android:id="@+id/string_receiver_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l3"
+        android:text="к кому"
+        android:textColor="#004C8D"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+
+    <TextView
+        android:id="@+id/txtReceiverUpcoming_visit"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/textColor"
+        android:text="Shoaziz SHoaziz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/string_receiver_visit"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+       />
+    <View
+        android:id="@+id/l4"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/txtReceiverUpcoming_visit"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DBD5D5"
+        />
+
+
+    <TextView
+        android:id="@+id/date_string_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l4"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textColor="#004C8D"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="@string/date"
+        />
+    <TextView
+        android:id="@+id/txtDateVisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_string_visit"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:text="25.07.1998"
+        />
+    <TextView
+        android:id="@+id/time_enter_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateVisit"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textColor="#004C8D"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="время входа"
+        />
+    <TextView
+        android:id="@+id/time_enter_visit_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_enter_visit"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:text="25.07.1998"
+        />
+
+    <TextView
+        android:id="@+id/time_exit_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateVisit"
+        app:layout_constraintStart_toEndOf="@+id/time_enter_visit"
+        app:layout_constraintLeft_toRightOf="@+id/time_enter_visit"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="#004C8D"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="время выхода"
+        />
+    <TextView
+        android:id="@+id/time_exit_visit_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toEndOf="@+id/time_enter_visit"
+        app:layout_constraintLeft_toRightOf="@+id/time_enter_visit"
+        app:layout_constraintTop_toBottomOf="@+id/time_exit_visit"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:text="25.07.1998"
+        />
+
+    <TextView
+        android:id="@+id/escort_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="сопровождение"
+        android:textColor="#004C8D"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_enter_visit_txt"/>
+
+    <TextView
+        android:id="@+id/escort_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_13ssp"
+        android:text="без сопровождения"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escort_string"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

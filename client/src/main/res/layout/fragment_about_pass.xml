@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.AboutPassFragment">
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/logo_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_name_logo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_50sdp"/>
+
+            <TextView
+                android:id="@+id/ordered_txt_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пропуск заказан!"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_23ssp"
+                app:layout_constraintTop_toBottomOf="@+id/logo_visit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_20sdp"/>
+
+
+
+            <TextView
+                android:id="@+id/string_visitor_order_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ordered_txt_c"
+                android:text="посетитель"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="#004C8D"
+                android:textSize="@dimen/_11ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+
+            <TextView
+                android:id="@+id/txt_visitor_upcoming_order_c"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/textColor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Shoaziz Bakhtiyorov"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/string_visitor_order_c"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <View
+                android:id="@+id/l3_c"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_visitor_upcoming_order_c"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                />
+
+            <TextView
+                android:id="@+id/date_string_order_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/l3_c"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="#004C8D"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/date"
+                />
+            <TextView
+                android:id="@+id/txtDateOrder_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_string_order_c"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="25.07.1998"
+                />
+            <View
+                android:id="@+id/l4_c"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/txtDateOrder_c"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                />
+
+            <TextView
+                android:id="@+id/phone_order_string_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="мобильный телефон"
+                android:textColor="#004C8D"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/l4_c" />
+
+            <TextView
+                android:id="@+id/phone_order_txt_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="99894 633 00 74"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_order_string_c" />
+
+            <TextView
+                android:id="@+id/mail_order_string_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="e-mail"
+                android:textColor="#004C8D"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_order_txt_c" />
+
+            <TextView
+                android:id="@+id/mail_order_txt_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="shoaziz@mail.ru"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mail_order_string_c" />
+
+            <TextView
+                android:id="@+id/string_receiver_order_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mail_order_txt_c"
+                android:text="принимающий"
+                android:textColor="#004C8D"
+                android:textSize="@dimen/_11ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:id="@+id/txtReceiverUpcoming_order_c"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/textColor"
+                android:text="Shoaziz SHoaziz"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/string_receiver_order_c"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/escort_string_order_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="сопровождение"
+                android:textColor="#004C8D"
+                android:textSize="@dimen/_11ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtReceiverUpcoming_order_c"/>
+
+            <TextView
+                android:id="@+id/escort_txt_order_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_13ssp"
+                android:text="без сопровождения"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/go_to_first_c"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/escort_string_order_c"/>
+
+
+            <Button
+                android:id="@+id/go_to_first_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/escort_txt_order_c"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="#189ACB"
+                android:padding="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@+id/change_txt_c"
+                android:text="В начало"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:id="@+id/change_txt_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Редактировать"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="#189ACB"
+                app:layout_constraintTop_toBottomOf="@+id/go_to_first_c"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="60dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

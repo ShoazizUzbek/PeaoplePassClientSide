@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">PeaoplePassClientSide</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="now_onboard">Сейчас на территории</string>
+    <string name="upcoming">Предстоящие визити</string>
+    <string name="visitor">посетитель</string>
+    <string name="reciever">принимающий</string>
+    <string name="search">Поиск</string>
+    <string name="all">все</string>
+    <string name="info_registration">Информация о регистрации</string>
+    <string name="loading">Загрузка...</string>
+    <string name="date">Дата</string>
+    <string name="enter">ВОЙТИ</string>
+    <string name="website">www.peoplepass.ru</string>
+    <string name="wellcome">Добро пожаловать \n в People Pass!</string>
+    <string name="enter_phone_number">Введите ваш номер телефона \n для получения SMS-кода</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="next">Далее</string>
+    <string name="enter_verification">Введите код подтверждения из SMS-сообщения</string>
+    <string name="didnotgetcode">Не пришла смс? Отправить заново</string>
+    <string name="go_to_back">Вернуться назад</string>
+    <string name="fill_profile">Заполнить профиль</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="error_empty_text">заполните</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="upcomingvisits">Предстоящие визиты</string>
+    <string name="empty">Список визитов пуст</string>
+    <string name="sorting">Сортировать</string>
+    <string name="by_date">по дате</string>
+    <string name="fill">Выполните</string>
+    <string name="save">сохранить</string>
+    <string name="upload_photo_profile">Загрузите фото профилья</string>
+    <string name="text_status">ожидание визита</string>
+    <string name="sort">Сортировать</string>
+    <string name="history_visits">История пропусков</string>
+    <string name="call">Позвонить</string>
+    <string name="start_chat">Начать чат</string>
+    <string name="support_phone_number">+79091231212</string>
+    <string name="my_profile">Мой профиль</string>
+    <string name="info_visit">Информация о визите</string>
+    <string name="info_visitor">Информация о посетителе</string>
+
+</resources>

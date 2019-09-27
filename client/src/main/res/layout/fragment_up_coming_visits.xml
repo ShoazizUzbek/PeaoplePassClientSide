@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.UpComingVisits">
+
+    
+
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar_upcoming"
+       android:background="#FFFFFF"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:padding="@dimen/_5sdp"
+       android:gravity="center_horizontal"
+       >
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:id="@+id/txt_upcoming_toolbar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:text="@string/upcoming"
+              android:textSize="@dimen/_15ssp"
+              android:textColor="@color/textColor"/>
+      </RelativeLayout>
+        
+   </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/top_layout_upcoming"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar_upcoming"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/soring_txt_upcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="#000000"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/sorting"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/sorting_by_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="#AAAAAD"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:drawableRight="@drawable/ic_vector"
+            android:drawableEnd="@drawable/ic_vector"
+            android:text="@string/by_date"/>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/top_layout_upcoming"
+        android:id="@+id/recycler_upcoming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progress_upcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/progressBarBlue"/>
+
+    <TextView
+        android:id="@+id/empty_txt_upcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_200sdp"
+        android:text="@string/empty"
+        android:textColor="#C8C7CC"/>
+
+    <Button
+        android:id="@+id/order_pass_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="60dp"
+        android:background="#189ACB"
+        android:padding="@dimen/_15sdp"
+
+        android:text="Заказать пропуск"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14ssp" />
+
+</RelativeLayout>

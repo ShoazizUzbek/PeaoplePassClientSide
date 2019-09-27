@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.OrderPass">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_order"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/back_order"
+                    android:src="@drawable/ic_arrow_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"/>
+                <TextView
+                    android:id="@+id/txt_order_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Заказ пропуска"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/textColor"/>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp">
+
+            <TextView
+                android:id="@+id/txt_data_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Данные посетителя"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_surname"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_surname" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_order_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_data_order">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtOrderSurName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="фамилия*"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="#C8C7CC"
+                    android:textColorLink="@color/colorMain"
+                    android:textSize="@dimen/_15ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_order_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_middlename"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_order_surname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtOrderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="имя*"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="#C8C7CC"
+                    android:textSize="@dimen/_15ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_middlename" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_order_middlename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_order_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtOrderMiddleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="отчество*"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="#C8C7CC"
+                    android:textSize="@dimen/_15ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_phone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_order_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_email"
+                app:layout_constraintTop_toBottomOf="@+id/edt_order_middlename">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtOrderPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="мобильный телефон"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="#C8C7CC"
+                    android:textSize="@dimen/_15ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                app:layout_constraintBottom_toTopOf="@+id/edt_order_email" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_order_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@+id/txt_data_receiver"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_order_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtOrderMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="e-mail"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="#C8C7CC"
+                    android:textSize="@dimen/_15ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                app:layout_constraintTop_toBottomOf="@+id/edt_order_email" />
+
+            <TextView
+                android:id="@+id/txt_data_receiver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="Данные принимающего"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toTopOf="@+id/edt__order_receiver"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_order_email" />
+
+
+            <RelativeLayout
+                android:id="@+id/edt__order_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txt_data_receiver">
+
+                <TextView
+                    android:id="@+id/whome_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="к кому*"
+                    android:textColor="#C8C7CC"
+                    android:textSize="@dimen/_15ssp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/recyc_lay"
+                app:layout_constraintTop_toBottomOf="@+id/edt__order_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_employe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                   ></androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/edt__order_date"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:layout_constraintTop_toBottomOf="@+id/recyc_lay">
+               <TextView
+                   android:id="@+id/enter_date"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="@dimen/_10sdp"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginEnd="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:text="дата*"
+                   android:textColor="#C8C7CC"
+                   android:textSize="@dimen/_15ssp"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintLeft_toLeftOf="parent"/>
+
+               <TextView
+                   android:id="@+id/escort_o"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="сопровождение"
+                   android:textColor="@color/textColor"
+                   app:layout_constraintRight_toLeftOf="@+id/switch_btn"
+                   app:layout_constraintEnd_toStartOf="@+id/switch_btn"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"/>
+
+              <com.suke.widget.SwitchButton
+                  android:id="@+id/switch_btn"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/_10sdp"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:sb_checked_color="#0098CB"/>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DBD5D5"
+                app:layout_constraintTop_toBottomOf="@+id/edt__order_date" />
+
+
+            <Button
+                android:id="@+id/do_pass_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="#189ACB"
+                android:padding="@dimen/_15sdp"
+                android:text="Оформить пропуск"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toBottomOf="@+id/edt__order_date" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
